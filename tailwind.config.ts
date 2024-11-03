@@ -9,11 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        green:  '#4baf47',
+        green:  {
+          1: "#4baf47"
+        },
+        orange: {
+          1: "#ff9100"
+        }
       },
     },
     boxShadow: {
 
+    },backgroundImage: {
+      'hero': "url('/bg2.jpg')",
     }
   },
   plugins: [],
