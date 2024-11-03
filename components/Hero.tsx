@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
     <section className="landing-section">
-      <div className="hero-bg bg-cover bg-no-repeat bg-right absolute  h-full w-full top-0 z-0" />
+      <div className="hero-bg  absolute  h-full w-full top-0 z-0" />
       <div className="flexBetween flex-col h-[100%] relative z-10">
         <div></div>
         <div className="flexCenter flex-col text-center">

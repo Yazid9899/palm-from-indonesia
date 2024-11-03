@@ -21,6 +21,7 @@ const config: Config = {
 
     },backgroundImage: {
       'hero': "url('/bg2.jpg')",
+      'aboutUs': "url('/aboutUs-bg.png')"
     }
   },
   plugins: [],

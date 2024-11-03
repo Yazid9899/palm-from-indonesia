@@ -1,10 +1,10 @@
 // import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Featured from "@/components/Featured";
-import ProductLineup from "@/components/ProductLineup";
 import AboutUs from "@/components/AboutUs";
-import Footer from "@/components/Footer";
+// import Featured from "@/components/Featured";
+// import ProductLineup from "@/components/ProductLineup";
+// import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -12,9 +12,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <AboutUs />
-      <Featured />
+      {/* <Featured />
       <ProductLineup />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }
