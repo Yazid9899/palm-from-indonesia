@@ -18,12 +18,13 @@ const config: Config = {
       },
     },
     boxShadow: {
-      
+
     },backgroundImage: {
       'hero': "url('/bg2.jpg')",
       'aboutUs': "url('/aboutUs-bg.png')",
       'featured': "url('/features-1.png')",
-      'lineUp': "url('/texture-2.png')"
+      'lineUp': "url('/texture-2.png')",
+      'footer': "url('/footer-bg.jpg')"
     }
   },
   plugins: [],

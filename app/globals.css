@@ -61,6 +61,12 @@ body {
   .regular-16 {
     @apply text-base font-light;
   }
+  .regular-12 {
+    @apply text-sm font-extralight;
+  }
+  .regular-10 {
+    @apply text-xs font-extralight;
+  }
 
   .hero-bg {
     @apply bg-hero z-0 bg-cover bg-no-repeat bg-right;
@@ -68,6 +74,10 @@ body {
   .features-bg {
     @apply bg-featured z-0 bg-cover bg-no-repeat bg-right;
   }
+  .footer-bg {
+    @apply bg-footer bg-cover bg-no-repeat w-full;
+  }
+
   .lineUp-bg {
     @apply bg-lineUp bg-cover bg-no-repeat;
   }
