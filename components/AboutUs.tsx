@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutUs() {
   return (
-    <section className="landing-section ">
+    <section className="">
       <Image
         src="/about-txture.png"
         alt="texture"
@@ -91,7 +91,7 @@ export default function AboutUs() {
             <p>We only give the best brodi ku, siap abangkuuh</p>
           </div>
         </div>
-        <div className="line h-1/2"></div>
+        <div className="line-y"></div>
         <div className="flexCenter max-w-[18.75rem]">
           <svg
             width="82"
@@ -113,7 +113,7 @@ export default function AboutUs() {
             <p>We are willing to send you free sample to assure our quality.</p>
           </div>
         </div>
-        <div className="line "></div>
+        <div className="line-y "></div>
 
         <div className="flexCenter max-w-[18.75rem]">
           <svg
@@ -158,7 +158,7 @@ export default function AboutUs() {
             <p>Adaptability & Just-in-time delivery</p>
           </div>
         </div>
-        <div className="line h-1/2"></div>
+        <div className="line-y"></div>
 
         <div className="flexCenter max-w-[18.75rem]">
           <svg
