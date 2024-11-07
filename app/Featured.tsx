@@ -2,23 +2,23 @@ import Image from "next/image";
 export default function Featured() {
   return (
     <>
-      <section className="h-[36rem]">
-        <div className="flexCenter mx-40 mt-20 gap-10">
+      <section className="">
+        <div className="flex flex-col md:flexCenter md:flex-row md:mx-5 lg:mx-20 my-10">
           <Image
             src="/features-1.png"
             alt="texture"
             height={500}
             width={500}
-            className=""
+            className="self-center"
           />
-          <div className=" gap-1">
-            <p className="regular-b-20">Quality Product</p>
-            <h1 className="bold-48">Only The Finest productss</h1>
-            <h2 className="regular-20 text-green-1 mt-5 mb-10">
+          <div className="m-3 md:m-10">
+            <p className="regular-b-16 md:regular-b-20">Quality Product</p>
+            <h1 className="bold-20 md:bold-48">Only The Finest productss</h1>
+            <h2 className="regular-16 lg:regular-20 text-green-1 my-5 md:mb-10">
               bridging the gap between global demand and Indonesia’s exceptional
               agriculture products
             </h2>
-            <p>
+            <p className="text-xs text-justify">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, dolore eu fugiat nulla pariatur. Excepteur
@@ -26,7 +26,7 @@ export default function Featured() {
               deserunt mollit anim id est laborum.
             </p>
             <div className="mt-10">
-              <button className="flexCenter gap-2 rounded-full border border-green-200 bg-green-1 px-4 py-2 text-white">
+              <button className="text-xs flexCenter gap-2 rounded-full border border-green-200 bg-green-1 px-4 py-2 text-white">
                 Learn More
                 <svg
                   width="21"
@@ -46,35 +46,35 @@ export default function Featured() {
           </div>
         </div>
       </section>
-      <div className="mt-20">
+      <div className="">
         <div className="line-x" />
-        <div className="flexCenter gap-20">
+        <div className="flexCenter flex-wrap gap-10 md:gap-20">
           <Image
             src="/certificate-1.jpg"
             alt="texture"
-            height={125}
-            width={125}
+            height={100}
+            width={100}
             className=""
           />{" "}
           <Image
             src="/certificate-2.jpg"
             alt="texture"
-            height={125}
-            width={125}
+            height={100}
+            width={100}
             className=""
           />{" "}
           <Image
             src="/certificate-3.jpg"
             alt="texture"
-            height={125}
-            width={125}
+            height={100}
+            width={100}
             className=""
           />{" "}
           <Image
             src="/certificate-4.jpg"
             alt="texture"
-            height={125}
-            width={125}
+            height={100}
+            width={100}
             className=""
           />
         </div>
