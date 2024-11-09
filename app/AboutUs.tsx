@@ -100,7 +100,7 @@ export default function AboutUs() {
                 showMore ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
               }`}
             >
-              <h3 className=" text-green-1">Export Experience</h3>
+              <h3 className=" text-green-2">Export Experience</h3>
               <p className="">
                 Brand of Palm From Indonesia founded in 2021 as representative
                 to our first product, the Organic Palm Sugar. After previously
@@ -165,7 +165,7 @@ export default function AboutUs() {
       </div>
 
       {/* Quality Control section */}
-      <div className="flexCenter flex-wrap  bg-green-1   text-xs text-white ">
+      <div className="flexCenter flex-wrap  bg-green-2  text-xs text-white ">
         {OurValues.map((value) => (
           <div key={value.id} className="flexCenter">
             <div className="flexCenter max-w-[17rem] py-5 gap-4">

@@ -10,7 +10,8 @@ const config: Config = {
     extend: {
       colors: {
         green:  {
-          1: "#4baf47"
+          1: "#4baf47",
+          2: "#00712D",
         },
         orange: {
           1: "#ff9100"
@@ -18,7 +19,7 @@ const config: Config = {
       },
     },
     boxShadow: {
-      'sideBar': "0 35px 60px -15px rgba(0,0,0.1)"
+      'bar': "0 35px 60px -15px rgba(0,0,0.1)"
     },backgroundImage: {
       'hero': "url('/bg2.jpg')",
       'aboutUs': "url('/aboutUs-bg.png')",
@@ -26,7 +27,9 @@ const config: Config = {
       'lineUp': "url('/texture-2.png')",
       'footer': "url('/footer-bg.jpg')",
       'contactUs': "url('/contactUs.png')",
-      'productLineUp': "url('/productLineUp-bg.png')"
+      'productLineUp': "url('/productLineUp-bg.png')",
+      'vanillaBaner': "url('/vanilla-banner.jpg')",
+      'vanillaPowder': "url('/vanilla-powder.jpg')"
     }
   },
   plugins: [],

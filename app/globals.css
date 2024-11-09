@@ -24,7 +24,7 @@ body {
   }
 
   .flexEnd {
-    @apply flex items-center justify-end;
+    @apply flex items-end justify-center;
   }
   /* container */
   .landing-section {
@@ -55,14 +55,20 @@ body {
   .bold-16 {
     @apply text-base font-bold;
   }
+  .regular-b-60 {
+    @apply text-6xl font-['Reenie_Beanie'] text-orange-1;
+  }
   .regular-b-48 {
-    @apply text-4xl font-['Reenie_Beanie'] font-medium text-orange-1;
+    @apply text-4xl font-['Reenie_Beanie'] text-orange-1;
   }
   .regular-b-20 {
     @apply text-xl font-['Reenie_Beanie'] font-medium text-orange-1;
   }
   .regular-b-16 {
     @apply text-base font-['Reenie_Beanie'] font-medium text-orange-1;
+  }
+  .regular-24 {
+    @apply text-2xl font-light;
   }
   .regular-16 {
     @apply text-base font-light;
@@ -92,6 +98,7 @@ body {
   .productLineUp-bg {
     @apply bg-productLineUp bg-cover bg-no-repeat;
   }
+
   .line-y {
     @apply border-l-2 h-1/3 mx-3;
   }

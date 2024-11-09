@@ -2,7 +2,7 @@ import Form from "next/form";
 import Image from "next/image";
 export default function ContactUs() {
   return (
-    <section className="">
+    <section id="contactUs" className="">
       <div className="flexCenter bg-[#F5F5F5]">
         <Image
           src="/contactUs-left.png"

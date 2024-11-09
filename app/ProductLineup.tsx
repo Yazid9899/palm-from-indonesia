@@ -42,7 +42,7 @@ export default function roductLineup() {
                 alt={product.name}
                 height={300}
                 width={300}
-                className=""
+                className="hover:animate-pulse hover:cursor-pointer"
               />
 
               <div className=" relative bottom-6 w-[280px] bg-white p-4  rounded-lg drop-shadow-lg">
