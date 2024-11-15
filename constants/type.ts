@@ -5,7 +5,15 @@ export interface NavLink {
   label: string;
   list?: { name: string; tag: string }[];
 }
-
+export interface FormData {
+  firstName: string;
+  lastName: string;
+  companyName: string;
+  email: string;
+  phone: string;
+  address: string;
+  message: string;
+}
 export interface ProductType {
   slug: string;
   name: string;

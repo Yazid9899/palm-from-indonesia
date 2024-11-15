@@ -49,7 +49,7 @@ export default function Navbar() {
         pathname === "/contact" ? "bg-slate-900" : ""
       }`}
     >
-      <div className="flexStart lg:min-w-[50%]">
+      <div className="flexStart lg:min-w-[50%] z-20">
         <Image
           className="lg:ml-10 lg:w-[250px] hover:cursor-pointer"
           onClick={() => router.push("/")}
@@ -59,7 +59,7 @@ export default function Navbar() {
           height={39.06}
         />
       </div>
-      <div className=" hidden  gap-10 mx-auto md:flexCenter text-white">
+      <div className=" hidden  gap-10 mx-auto md:flexCenter text-white ">
         {NAV_LINKS.map((link: NavLink) =>
           link.list ? (
             <div key={link.label}>
@@ -106,43 +106,79 @@ export default function Navbar() {
           )
         )}
       </div>
-      <Image
-        src="menu.svg"
-        alt="menu"
-        height={50}
-        width={50}
-        className="cursor-pointer lg:hidden md:hidden mr-8"
+      <svg
+        width="50"
+        height="50"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
         onClick={toggleMenu}
-      />
-      <div
-        className={`fixed top-0 right-0 h-screen flexStart flex-col shadow-xl text-white bg-slate-950 w-56 z-50 transition-transform duration-300 ${
-          menuOpen ? "translate-x-0" : "translate-x-full"
+        className={`cursor-pointer lg:hidden md:hidden mr-10 ${
+          menuOpen ? "hidden" : ""
         }`}
       >
-        <button
-          className="cursor-pointer lg:hidden md:hidden m-5  bold-20"
-          onClick={toggleMenu}
-        >
-          X
-        </button>
-        <div className="flex flex-col gap-5 pl-2">
+        <path
+          d="M5 7H19"
+          stroke="white"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+        <path
+          d="M5 12H19"
+          stroke="white"
+          strokeWidth="2"
+          stroke-linecap="round"
+        />
+        <path
+          d="M5 17H19"
+          stroke="white"
+          strokeWidth="2"
+          stroke-linecap="round"
+        />
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={2}
+        stroke="white"
+        className={`size-9 cursor-pointer lg:hidden md:hidden mr-10 bold-20 ${
+          menuOpen ? "" : "hidden"
+        }`}
+        onClick={toggleMenu}
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M6 18 18 6M6 6l12 12"
+        />
+      </svg>
+      <div
+        className={` md:hidden fixed top-0 left-0 right-0 w-screen flexStart flex-col drop-shadow-2xl text-slate-50 transition-transform duration-300 ${
+          menuOpen ? "translate-y-16" : "translate-x-full"
+        } ${
+          scrolled
+            ? "bg-slate-900 drop-shadow-xl"
+            : "bg-slate-950 bg-opacity-45"
+        }`}
+      >
+        <div className="flex flex-col w-full">
           {NAV_LINKS.map((link, n) =>
             link.list ? (
-              <div key={n}>
-                {" "}
-                <button
-                  className="regular-24 hover:font-semibold"
+              <div key={n} className="text-start w-full ">
+                <p
+                  className="text-lg hover:text-orange-400 w-full hover:bg-slate-800 p-2 pl-12 hover:border-l-4 border-orange-1"
                   onClick={toggleSidebarDropdown}
                 >
                   {link.label}
-                </button>
+                </p>
                 {sidebarDropdownOpen && (
-                  <div className="ml-5 transition-all duration-300 ease-in-out transform">
+                  <div className="m-1 transition-all duration-300 ease-in-out transform">
                     {link.list.map((product, n) => (
                       <Link
                         key={n}
                         href={`/products/${product.tag}`}
-                        className="block p-1 hover:bg-opacity-50 text-white hover:font-semibold"
+                        className="block pl-20 py-1 hover:bg-opacity-50  hover:text-orange-400"
                         onClick={() => {
                           toggleMenu();
                           setSidebarDropdownOpen(false);
@@ -158,7 +194,7 @@ export default function Navbar() {
               <Link
                 key={n}
                 href={link.href}
-                className="regular-24 hover:font-semibold"
+                className="text-lg hover:text-orange-400 hover:bg-slate-800 w-full p-2 pl-12 hover:border-l-4 border-orange-1"
                 onClick={toggleMenu}
               >
                 {link.label}

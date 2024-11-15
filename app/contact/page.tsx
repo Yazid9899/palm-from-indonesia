@@ -17,12 +17,26 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
+  const [error, setError] = useState("");
+
+  const validateForm = () => {
+    const { firstName, lastName, email, phone, message } = formData;
+    if (!firstName || !lastName || !email || !phone || !message) {
+      setError("Please fill in all required fields.");
+      return false;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setError("Please enter a valid email address.");
+      return false;
+    }
+    setError("");
+    return true;
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    console.log("label", name, "valueEEEEEE", value);
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
@@ -31,9 +45,41 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!validateForm()) return;
+
     setIsSubmitting(true);
     setResponseMessage("");
-    console.log(formData);
+
+    try {
+      const response = await fetch("/api", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await response.json();
+
+      if (response.ok) {
+        setResponseMessage(data.message);
+        setFormData({
+          firstName: "",
+          lastName: "",
+          companyName: "",
+          email: "",
+          phone: "",
+          address: "",
+          message: "",
+        });
+      } else {
+        setResponseMessage(
+          data.message || "An error occurred. Please try again."
+        );
+      }
+    } catch (error) {
+      console.log(error);
+      setResponseMessage("An error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -129,10 +175,7 @@ export default function Contact() {
                   <div className="flex gap-x-4">
                     <dt className="flex-none">
                       <span className="sr-only">Telephone</span>
-                      {/* <PhoneIcon
-                        className="h-7 w-6 text-gray-400"
-                        aria-hidden="true"
-                      /> */}
+
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -160,10 +203,6 @@ export default function Contact() {
                   <div className="flex gap-x-4">
                     <dt className="flex-none">
                       <span className="sr-only">Email</span>
-                      {/* <EnvelopeIcon
-                        className="h-7 w-6 text-gray-400"
-                        aria-hidden="true"
-                      /> */}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -192,7 +231,7 @@ export default function Contact() {
               </div>
             </div>
             <Form
-              action="s"
+              action="dasd"
               onSubmit={handleSubmit}
               className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8"
             >
@@ -326,13 +365,19 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="mt-8 flex justify-end">
-                  <button
-                    type="submit"
-                    // disabled={isSubmitting}
-                    className="rounded-md bg-green-2 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                  >
-                    Send message
-                  </button>
+                  <div>
+                    {error && <p className="text-red-500">{error}</p>}
+                    {responseMessage && (
+                      <p className="text-green-500">{responseMessage}</p>
+                    )}
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="rounded-md bg-green-2 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
+                    >
+                      {isSubmitting ? "Sending..." : "Send message"}
+                    </button>
+                  </div>
                 </div>
               </div>
             </Form>
