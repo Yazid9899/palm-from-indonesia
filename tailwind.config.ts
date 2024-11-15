@@ -19,7 +19,7 @@ const config: Config = {
       },
     },
     boxShadow: {
-      'bar': "0 35px 60px -15px rgba(0,0,0.1)"
+      'sideBar': "0 35px 60px -15px rgba(0,0,0.1)",
     },backgroundImage: {
       'hero': "url('/bg2.jpg')",
       'aboutUs': "url('/aboutUs-bg.png')",
@@ -29,7 +29,8 @@ const config: Config = {
       'contactUs': "url('/contactUs.png')",
       'productLineUp': "url('/productLineUp-bg.png')",
       'vanillaBaner': "url('/vanilla-banner.jpg')",
-      'vanillaPowder': "url('/vanilla-powder.jpg')"
+      'coconutBanner': "url('/coconut-banner.jpg')",
+      'palmBanner': "url('/palm-banner.jpg')"
     }
   },
   plugins: [],

@@ -1,19 +1,14 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-
+import { VALUES } from "@/constants/data";
 type FounderProps = {
   id: number;
   imageSrc: string;
   name: string;
   position: string;
 };
-type OurValueProps = {
-  id: number;
-  svgSrc: string;
-  title: string;
-  text: string;
-};
+
 const Founders: FounderProps[] = [
   {
     id: 1,
@@ -26,32 +21,6 @@ const Founders: FounderProps[] = [
     imageSrc: "/aboutUs-2.jpg",
     name: "Muhammad Iqbal Akbar",
     position: "Co-Founder & BD",
-  },
-];
-const OurValues: OurValueProps[] = [
-  {
-    id: 1,
-    svgSrc: "/icon-1.svg",
-    title: "Quality Control",
-    text: "We only give the best, neverlet you down",
-  },
-  {
-    id: 2,
-    svgSrc: "/icon-2.svg",
-    title: "Free Sample",
-    text: "We are willing to send you free sample to assure our quality",
-  },
-  {
-    id: 3,
-    svgSrc: "/icon-3.svg",
-    title: "Reliable Shipping",
-    text: "Adaptability & Just-in-time delivery",
-  },
-  {
-    id: 4,
-    svgSrc: "/icon-4.svg",
-    title: "Available 24/7",
-    text: "Anytime you contacted us, our team always ready.",
   },
 ];
 
@@ -166,7 +135,7 @@ export default function AboutUs() {
 
       {/* Quality Control section */}
       <div className="flexCenter flex-wrap  bg-green-2  text-xs text-white ">
-        {OurValues.map((value) => (
+        {VALUES.map((value) => (
           <div key={value.id} className="flexCenter">
             <div className="flexCenter max-w-[17rem] py-5 gap-4">
               <Image

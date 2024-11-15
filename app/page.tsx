@@ -4,7 +4,7 @@ import Hero from "@/app/Hero";
 import AboutUs from "@/app/AboutUs";
 import Featured from "@/app/Featured";
 import ProductLineup from "@/app/ProductLineup";
-import ContactUs from "@/app/ContactUs";
+import Testimonial from "@/app/Testimonial";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
       <AboutUs />
       <ProductLineup />
       <Featured />
-      <ContactUs />
+      <Testimonial />
       <Footer />
     </>
   );
