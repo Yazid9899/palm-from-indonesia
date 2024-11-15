@@ -27,10 +27,10 @@ export default function Page() {
   return (
     <>
       <Navbar />
-      <section key={product.slug} className="mx-10 flex flex-col">
+      <section key={product.slug} className=" flex flex-col">
         <div
           style={{ backgroundImage: `url(/${product?.slug}-banner.jpg)` }}
-          className={` bg-cover bg-center bg-no-repeat w-full h-[377px] flex text-white`}
+          className={` bg-cover bg-center bg-no-repeat w-full h-[377px] flex text-white `}
         >
           <div className="flex justify-between w-full">
             <div className="self-end regular-b-60 bg-black/50 p-3 w-full text-orange-1">
@@ -38,7 +38,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <h1 className="bold-48 p-4 text-slate-800">{product?.name}</h1>
+        <h1 className="bold-48 p-4 text-slate-800 mx-4">{product?.name}</h1>
         <Image
           src="/product-page-line.png"
           alt=""
@@ -47,7 +47,7 @@ export default function Page() {
           className="w-screen my-3"
         />
         <div className="gap-5">
-          <div className="self-start flex flex-col">
+          <div className="self-start flex flex-col mx-5">
             <p className=" md:regular-16  mt-5 text-justify">
               <span className="font-bold text-orange-1">
                 {product.description1.split(" ").slice(0, 1).join(" ")}{" "}
@@ -59,13 +59,15 @@ export default function Page() {
             </p>
           </div>
           <div className="py-20">
-            <h1 className="text-slate-950 bold-48 py-5">PRODUCT LINE UP</h1>
+            <h1 className="text-slate-950 bold-30 md:bold-48 py-5 text-center md:text-start">
+              PRODUCT LINE UP
+            </h1>
             <div className="line-x"></div>
-            <div className="flexStart  py-5 w-full text-white flex-wrap gap-1 md:gap-4">
+            <div className=" flexCenter  py-5 w-full text-white flex-wrap gap-1 md:gap-4">
               {product.devarative.map((devarative, n) => (
                 <div
                   key={n}
-                  className="w-40 h-40 lg:w-[20rem] lg:h-[17rem] flexEnd relative"
+                  className="w-40 h-40 md:w-[19rem] md:h-72 lg:h-[17rem] flexEnd relative md:mx-5"
                 >
                   <Image
                     src={devarative.imageSrc}
@@ -98,7 +100,7 @@ export default function Page() {
                     alt=""
                     width={200}
                     height={200}
-                    className="h-full w-52"
+                    className="h-full md:w-52 w-28"
                   />
                   <div className="ml-3 p-1 flex flex-col justify-center">
                     <p className="bold-16">{type.name}</p>
@@ -129,7 +131,7 @@ export default function Page() {
               onClick={() => {
                 window.location.href = `/contact?message=Request%20sample%20for%20${product.title}`;
               }}
-              className="mt-5 regular-16 bold-20 flexCenter gap-2 rounded-md bg-green-2 px-4 py-2 text-white"
+              className="mt-5 regular-16 bold-20 flexCenter gap-2 rounded-md bg-green-2 px-4 py-2 my-5 text-white"
             >
               Request Sample
               <svg
@@ -154,7 +156,7 @@ export default function Page() {
                   onClick={() => toggleDropdown(n)}
                   className="bg-slate-900 p-2 flexBetween rounded-lg drop-shadow-lg"
                 >
-                  <h1 className="text-xl font-semibold ">{spec.name}</h1>
+                  <h1 className="md:text-xl font-normal ">{spec.name}</h1>
                   <Image
                     src="/drop_vector.svg"
                     alt=""

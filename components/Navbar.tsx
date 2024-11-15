@@ -127,13 +127,13 @@ export default function Navbar() {
           d="M5 12H19"
           stroke="white"
           strokeWidth="2"
-          stroke-linecap="round"
+          strokeLinecap="round"
         />
         <path
           d="M5 17H19"
           stroke="white"
           strokeWidth="2"
-          stroke-linecap="round"
+          strokeLinecap="round"
         />
       </svg>
       <svg
@@ -154,8 +154,8 @@ export default function Navbar() {
         />
       </svg>
       <div
-        className={` md:hidden fixed top-0 left-0 right-0 w-screen flexStart flex-col drop-shadow-2xl text-slate-50 transition-transform duration-300 ${
-          menuOpen ? "translate-y-16" : "translate-x-full"
+        className={` md:hidden fixed top-20  w-screen flexStart flex-col drop-shadow-2xl text-slate-50 transition-transform duration-300 ${
+          menuOpen ? "translate-x-0" : "translate-x-full"
         } ${
           scrolled
             ? "bg-slate-900 drop-shadow-xl"
