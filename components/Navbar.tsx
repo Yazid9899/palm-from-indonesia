@@ -154,7 +154,7 @@ export default function Navbar() {
         />
       </svg>
       <div
-        className={` md:hidden fixed top-20  w-screen flexStart flex-col drop-shadow-2xl text-slate-50 transition-transform duration-300 ${
+        className={` md:hidden fixed top-16 md:top-20  w-screen flexStart flex-col drop-shadow-2xl text-slate-50 transition-transform duration-300 ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         } ${
           scrolled
