@@ -37,17 +37,16 @@ export default function AboutUs() {
         src="/about-txture.png"
         alt="texture"
         sizes="(max-width: 768px) 50vw, 25vw"
-        className="absolute md:h-[150px] md:w-[144px]  top-[100vh]"
+        className="absolute lg:h-[150px] lg:w-[144px] z-0"
         height={100}
         width={75}
       />
       <div className=" lg:mx-40 z-30">
-        <div className="ml-20 mt-10 mb-5 md:ml-48 lg:ml-5">
-          <h1 className="bold-20 md:bold-48">ABOUT US</h1>
+        <div className="ml-20 mt-10 mb-5 lg:ml-5">
+          <h1 className="bold-20 md:bold-48 pt-5">ABOUT US</h1>
           <p className="regular-b-20">THE TWO EMERALD FROM INDONESIA</p>
         </div>
         <div className="text-xs md:flexStart gap-10 mx-5">
-          {/* TEXT RESPONSIVE */}
           <div className=" text-justify w-full lg:regular-16">
             <p className=" mb-4 mt-7">
               Palm From Indonesia is an agricultural product brand of PT Dua
@@ -134,21 +133,24 @@ export default function AboutUs() {
       </div>
 
       {/* Quality Control section */}
-      <div className="flexCenter flex-wrap  bg-green-2  text-xs text-white ">
+      <div className="grid grid-cols-2 lg:grid-cols-4 lg:gap-4 py-5 md:p-5 bg-green-2 text-white">
         {VALUES.map((value) => (
-          <div key={value.id} className="flexCenter">
-            <div className="flexCenter max-w-[17rem] py-5 gap-4">
+          <div
+            key={value.id}
+            className="lg:flexCenter flexStart flex-col items-center "
+          >
+            <div className="flexCenter  py-5 gap-4">
               <Image
                 src={value.svgSrc}
                 alt={value.title}
                 height={77}
                 width={77}
-                className=""
+                className="size-10 md:size-16 lg:size-20"
               />
 
               <div className=" ">
                 <p className="bold-16">{value.title}</p>
-                <p>{value.text}</p>
+                <p className=" text-xs">{value.text}</p>
               </div>
             </div>
             {value.id !== 4 ? (

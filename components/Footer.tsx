@@ -12,7 +12,7 @@ interface Social {
 export const SOCIALSS: Social[] = [
   {
     label: "LinkedIn",
-    link: "https://www.linkedin.com",
+    link: "https://www.linkedin.com/company/pt-dua-zamrud-khatulistiwa/",
     icon: (props: SVGProps<SVGSVGElement>) => (
       <svg
         width="36"
@@ -34,7 +34,7 @@ export const SOCIALSS: Social[] = [
   },
   {
     label: "Instagram",
-    link: "https://www.instagram.com",
+    link: "https://www.instagram.com/palmfromindonesia/?igsh=MW9kNzg0NzV2MGthNA%3D%3D",
     icon: (props: SVGProps<SVGSVGElement>) => (
       <svg
         width="36"
@@ -66,7 +66,7 @@ export const SOCIALSS: Social[] = [
   },
   {
     label: "Whatsapp",
-    link: "",
+    link: " https://wa.me/081281748771",
     icon: (props: SVGProps<SVGSVGElement>) => (
       <svg
         width="40"
@@ -113,7 +113,7 @@ export default function Footer() {
             {SOCIALSS.map((social, n) => (
               <a
                 key={n}
-                href="https://www.linkedin.com"
+                href={social.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-gray-500"

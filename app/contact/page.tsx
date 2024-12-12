@@ -364,20 +364,18 @@ export default function Contact() {
                     </div>
                   </div>
                 </div>
-                <div className="mt-8 flex justify-end">
-                  <div>
-                    {error && <p className="text-red-500">{error}</p>}
-                    {responseMessage && (
-                      <p className="text-green-500">{responseMessage}</p>
-                    )}
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="rounded-md bg-green-2 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
-                    >
-                      {isSubmitting ? "Sending..." : "Send message"}
-                    </button>
-                  </div>
+                <div className="mt-8 flex justify-end gap-5">
+                  {error && <p className="text-red-500 pt-2">{error}</p>}
+                  {responseMessage && (
+                    <p className="text-green-500">{responseMessage}</p>
+                  )}
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="rounded-md bg-green-2 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-1"
+                  >
+                    {isSubmitting ? "Sending..." : "Send message"}
+                  </button>
                 </div>
               </div>
             </Form>

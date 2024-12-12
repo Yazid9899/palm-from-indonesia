@@ -33,14 +33,14 @@ const ProductsLineUp: ProductsProps[] = [
 ];
 export default function roductLineup() {
   return (
-    <section className="flexCenter p-20">
+    <section className="flexCenter md:p-20 py-20">
       <div className="h-full w-[75rem] flexCenter flex-col z-10">
         <div className="products-title flexCenter flex-col lineUp-bg w-3/4">
           <p className="regular-b-48">Only Organic Product</p>
           <h1 className="bold-48">OUR PRODUCTS</h1>
         </div>
         <div className="border-b-2 w-full border-black my-5"></div>
-        <div className="flexCenter flex-wrap gap-20 product-cards-container">
+        <div className="flexCenter flex-wrap md:gap-20 product-cards-container">
           {ProductsLineUp.map((product) => (
             <div key={product.id} className="flexCenter flex-col">
               <Link href={`/products/${product.label}`}>

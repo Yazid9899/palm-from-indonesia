@@ -42,7 +42,7 @@ export default function Featured() {
       </section>
       <div className="">
         <div className="line-x" />
-        <div className="flexCenter flex-wrap gap-10 md:gap-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 justify-items-center">
           <Image
             src="/certificate-1.jpg"
             alt="texture"

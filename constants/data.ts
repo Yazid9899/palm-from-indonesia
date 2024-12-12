@@ -253,7 +253,7 @@ export const VALUES = [
     id: 1,
     svgSrc: "/icon-1.svg",
     title: "Quality Control",
-    text: "from sourcing raw materials to final shipment, guaranteeing customer satisfaction.",
+    text: "From sourcing to shipment, ensuring satisfaction.",
   },
   {
     id: 2,
