@@ -1,165 +1,136 @@
 "use client";
+
 import Image from "next/image";
 import { useState } from "react";
-import { VALUES } from "@/constants/data";
-type FounderProps = {
-  id: number;
-  imageSrc: string;
-  name: string;
-  position: string;
-};
-
-const Founders: FounderProps[] = [
-  {
-    id: 1,
-    imageSrc: "/aboutUs-1.jpg",
-    name: "Haidar Ali Al Mushaffa",
-    position: "Founder & Director",
-  },
-  {
-    id: 2,
-    imageSrc: "/aboutUs-2.jpg",
-    name: "Muhammad Iqbal Akbar",
-    position: "Co-Founder & BD",
-  },
-];
+import { FOUNDERS, VALUES } from "@/constants/data";
 
 export default function AboutUs() {
   const [showMore, setShowMore] = useState(false);
 
-  const toggleShowMore = () => {
-    setShowMore((prevState) => !prevState);
-  };
-
   return (
-    <section className="" id="aboutUs">
-      <Image
-        src="/about-txture.png"
-        alt="texture"
-        sizes="(max-width: 768px) 50vw, 25vw"
-        className="absolute lg:h-[150px] lg:w-[144px] z-0"
-        height={100}
-        width={75}
-      />
-      <div className=" lg:mx-40 z-30">
-        <div className="ml-20 mt-10 mb-5 lg:ml-5">
-          <h1 className="bold-20 md:bold-48 pt-5">ABOUT US</h1>
-          <p className="regular-b-20">THE TWO EMERALD FROM INDONESIA</p>
-        </div>
-        <div className="text-xs md:flexStart gap-10 mx-5">
-          <div className=" text-justify w-full lg:regular-16">
-            <p className=" mb-4 mt-7">
-              Palm From Indonesia is an agricultural product brand of PT Dua
-              Zamrud Khatulistiwa, located in Tangerang, Banten, Indonesia.
-              Founded by Haidar and Iqbal in 2021, we are committed to support
-              the sustainable agriculture concept by providing the best of
-              Indonesia’s natural resources to the world.
+    <section id="aboutUs" className="section-pad">
+      <div className="container-main">
+        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+          <div>
+            <p className="eyebrow">About us</p>
+            <h2 className="display-2 mt-3">Rooted in Indonesia, built for global supply</h2>
+            <p className="lead mt-6">
+              Palm From Indonesia is an agricultural export brand of PT Dua
+              Zamrud Khatulistiwa, based in Tangerang, Banten. Founded in 2021,
+              we help global buyers access Indonesia's natural ingredients with
+              reliable documentation, careful handling, and transparent
+              sourcing.
             </p>
-            <p className=" mb-3">
-              Palm From Indonesia connect the world to the Indonesia’s finest
-              agriculture products. Our mission is to enhance lives by bridging
-              the gap between global demand and Indonesia’s exceptional
-              agriculture products, brings a secure international trade, and
-              open the opportunity for farmers to develop & grow.
+            <p className="lead mt-4">
+              Our mission is to connect demand with trusted local producers,
+              creating a resilient supply chain that grows with our partners and
+              supports farming communities.
             </p>
 
             <div
-              className={`overflow-hidden transition-all duration-1000 ease-in-out ${
-                showMore ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+              className={`mt-4 overflow-hidden transition-all duration-700 ${
+                showMore ? "max-h-[420px] opacity-100" : "max-h-0 opacity-0"
               }`}
             >
-              <h3 className=" text-green-2">Export Experience</h3>
-              <p className="">
-                Brand of Palm From Indonesia founded in 2021 as representative
-                to our first product, the Organic Palm Sugar. After previously
-                using the undername company, in August 2022 we registered our
-                own company under the name PT. Dua Zamrud Khatlistiwa. By having
-                our own company, we start to add other product such as vanilla
-                and other coconut derivatives products. At the same time, we
-                succeed to build our first business relation with company from
-                Japan and we start to supply the vanilla beans until now.
-              </p>
-              <div className="m-1 md:mt-3" onClick={toggleShowMore}>
-                <p className=" leading-4 text-orange-1 cursor-pointer">
-                  Show Less
+              <div className="mt-4 rounded-2xl bg-white/70 p-5 shadow-sm">
+                <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-[#1f3a2a]">
+                  Export experience
+                </h3>
+                <p className="mt-2 text-sm text-[#3d352d]">
+                  We launched with organic palm sugar and expanded into vanilla
+                  and coconut derivatives after establishing PT Dua Zamrud
+                  Khatulistiwa in 2022. Since then, we have built long-term
+                  partnerships with buyers in Asia and beyond.
                 </p>
               </div>
+              <button
+                type="button"
+                onClick={() => setShowMore(false)}
+                className="mt-3 text-sm font-semibold text-[#b35f2a]"
+              >
+                Show less
+              </button>
             </div>
-            {!showMore && (
-              <div className="mb-4" onClick={toggleShowMore}>
-                <a href="#aboutUs" className="flexStart">
-                  <p className=" leading-4 text-orange-1 animate-bounce">
-                    More
-                  </p>
 
-                  <svg
-                    className="animate-bounce ml-1 self-center"
-                    width="10"
-                    height="10"
-                    viewBox="0 0 56 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 1L28 25L55 1"
-                      stroke="orange"
-                      strokeWidth="4"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
+            {!showMore && (
+              <button
+                type="button"
+                onClick={() => setShowMore(true)}
+                className="mt-4 inline-flex items-center text-sm font-semibold text-[#b35f2a]"
+              >
+                Read more
+                <svg
+                  className="ml-2 h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 9L12 15L18 9"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
             )}
           </div>
-          <div className="flexStart gap-2  md:flex-col">
-            {Founders.map((founder) => (
-              <div key={founder.id} className="mb-10">
-                <Image
-                  src={`/aboutUs-${founder.id}.jpg`}
-                  alt={founder.name}
-                  height={150}
-                  width={150}
-                  className="md:w-72"
-                />
-                <div>
-                  <p className="font-semibold">{founder.name}</p>
-                  <p className="italic">{founder.position}</p>
-                </div>
+
+          <div className="grid gap-6">
+            <div className="rounded-3xl bg-white/70 p-6 shadow-sm">
+              <p className="text-xs uppercase tracking-[0.3em] text-[#8a7d6d]">
+                Founders
+              </p>
+              <div className="mt-5 grid gap-6">
+                {FOUNDERS.map((founder) => (
+                  <div key={founder.id} className="flex items-center gap-4">
+                    <Image
+                      src={founder.imageSrc}
+                      alt={founder.name}
+                      width={80}
+                      height={80}
+                      className="h-20 w-20 rounded-2xl object-cover"
+                    />
+                    <div>
+                      <p className="text-base font-semibold text-[#1f3a2a]">
+                        {founder.name}
+                      </p>
+                      <p className="text-sm text-[#6f6152]">
+                        {founder.position}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            <div className="rounded-3xl border border-[#1f3a2a]/10 bg-white/70 p-6 shadow-sm">
+              <p className="text-xs uppercase tracking-[0.3em] text-[#8a7d6d]">
+                Our promise
+              </p>
+              <div className="mt-4 grid gap-3">
+                {VALUES.map((value) => (
+                  <div key={value.id} className="flex items-start gap-3">
+                    <Image
+                      src={value.svgSrc}
+                      alt={value.title}
+                      width={36}
+                      height={36}
+                      className="h-9 w-9"
+                    />
+                    <div>
+                      <p className="text-sm font-semibold text-[#1f3a2a]">
+                        {value.title}
+                      </p>
+                      <p className="text-xs text-[#6f6152]">{value.text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-      {/* Quality Control section */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 lg:gap-4 py-5 md:p-5 bg-green-2 text-white">
-        {VALUES.map((value) => (
-          <div
-            key={value.id}
-            className="lg:flexCenter flexStart flex-col items-center "
-          >
-            <div className="flexCenter  py-5 gap-4">
-              <Image
-                src={value.svgSrc}
-                alt={value.title}
-                height={77}
-                width={77}
-                className="size-10 md:size-16 lg:size-20"
-              />
-
-              <div className=" ">
-                <p className="bold-16">{value.title}</p>
-                <p className=" text-xs">{value.text}</p>
-              </div>
-            </div>
-            {value.id !== 4 ? (
-              <div className="hidden border-l-2 h-20 mx-3"></div>
-            ) : (
-              <div className="hidden" />
-            )}
-          </div>
-        ))}
       </div>
     </section>
   );

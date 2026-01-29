@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <>
+    <main className="bg-[#f6f2ea]">
       <Navbar />
       <Hero />
       <ProductLineup />
@@ -17,6 +17,6 @@ export default function Home() {
       <Featured />
       <Testimonial />
       <Footer />
-    </>
+    </main>
   );
 }

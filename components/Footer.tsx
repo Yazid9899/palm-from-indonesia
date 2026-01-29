@@ -1,5 +1,3 @@
-"use client";
-// import { SOCIALS } from "@/constants/data";
 import Image from "next/image";
 import { SVGProps } from "react";
 
@@ -66,7 +64,7 @@ export const SOCIALSS: Social[] = [
   },
   {
     label: "Whatsapp",
-    link: " https://wa.me/081281748771",
+    link: "https://wa.me/081281748771",
     icon: (props: SVGProps<SVGSVGElement>) => (
       <svg
         width="40"
@@ -89,82 +87,97 @@ export const SOCIALSS: Social[] = [
 ];
 
 export default function Footer() {
-  const handleMailClick = (email: string) => {
-    window.location.href = `mailto:${email}`;
-  };
-
   return (
-    <footer className="w-screen  md:h-96 footer-bg text-white flex flex-col">
-      <div className="md:flexBetween flex flex-col md:flex-row gap-32 regular-12 mx-10 lg:mx-28 pt-20">
-        <div className="flexStart flex-col flex-1 gap-4">
-          <Image
-            className=""
-            src="/navbar_logo.png"
-            alt="logo"
-            width={150}
-            height={39.06}
-          />
-          <p className="">
-            With years of export experience and certified products, we bring the
-            best quality goods to many countries, ensuring you get top-notch
-            products every time
-          </p>
-          <div className="flex gap-5">
-            {SOCIALSS.map((social, n) => (
-              <a
-                key={n}
-                href={social.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-gray-500"
-              >
-                <social.icon className="h-10 w-10" aria-hidden="true" />
-              </a>
-            ))}
-          </div>
-        </div>
-        <div className="flexStart flex-col gap-2 flex-1 text-white">
-          <p className="bold-16">Contact</p>
-          <div
-            onClick={() => handleMailClick("sales@palmfromindonesia.com")}
-            className="flex gap-2 hover:cursor-pointer"
-          >
+    <footer className="mt-20 bg-[#0f1711] text-white">
+      <div className="container-main py-12">
+        <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
+          <div className="space-y-4">
             <Image
-              className=""
-              src="/mail-icon.svg"
-              alt="logo"
-              width={30}
-              height={30}
+              src="/navbar_logo.png"
+              alt="Palm From Indonesia"
+              width={170}
+              height={36}
             />
-            <p className="self-center">sales@palmfromindonesia.com</p>
-          </div>
-          <div className="flex gap-2">
-            <Image
-              className=""
-              src="/location-icon.svg"
-              alt="logo"
-              width={30}
-              height={20}
-            />
-            <p className="self-center">
-              Jalan Zaitun 1 Blok B4 No.1, Islamic Village, Kab. Tangerang,
-              Banten, 15811, Indonesia
+            <p className="text-sm text-white/70">
+              With years of export experience and certified products, we bring
+              high-quality goods to global partners with reliable documentation
+              and responsive service.
             </p>
+            <div className="flex gap-4">
+              {SOCIALSS.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 transition hover:text-[#f8d9a6]"
+                >
+                  <social.icon className="h-8 w-8" aria-hidden="true" />
+                </a>
+              ))}
+            </div>
           </div>
-          <div className="flex gap-2">
-            <Image
-              className=""
-              src="/phone-icon.svg"
-              alt="logo"
-              width={25}
-              height={25}
-            />
-            <p className="self-center">+62 81281748771 ; +62 81222398874</p>
+
+          <div className="space-y-3 text-sm">
+            <p className="text-xs uppercase tracking-[0.3em] text-white/60">
+              Contact
+            </p>
+            <a
+              href="mailto:sales@palmfromindonesia.com"
+              className="flex items-center gap-3 text-white/80 hover:text-white"
+            >
+              <Image src="/mail-icon.svg" alt="" width={20} height={20} />
+              sales@palmfromindonesia.com
+            </a>
+            <div className="flex items-start gap-3 text-white/80">
+              <Image src="/location-icon.svg" alt="" width={20} height={20} />
+              <p>
+                Jalan Zaitun 1 Blok B4 No.1, Islamic Village, Kab. Tangerang,
+                Banten, 15811, Indonesia
+              </p>
+            </div>
+            <a
+              href="tel:+6281281748771"
+              className="flex items-center gap-3 text-white/80 hover:text-white"
+            >
+              <Image src="/phone-icon.svg" alt="" width={18} height={18} />
+              +62 812 8174 8771
+            </a>
+            <a
+              href="tel:+6281222398874"
+              className="flex items-center gap-3 text-white/80 hover:text-white"
+            >
+              <Image src="/phone-icon.svg" alt="" width={18} height={18} />
+              +62 812 2239 8874
+            </a>
+          </div>
+
+          <div className="space-y-4 text-sm">
+            <p className="text-xs uppercase tracking-[0.3em] text-white/60">
+              Quick links
+            </p>
+            <div className="grid gap-2 text-white/80">
+              <a href="/products/vanilla" className="hover:text-white">
+                Vanilla beans
+              </a>
+              <a href="/products/coconut" className="hover:text-white">
+                Coconut derivatives
+              </a>
+              <a href="/products/palm" className="hover:text-white">
+                Palm sugar
+              </a>
+              <a href="/contact" className="hover:text-white">
+                Request a quote
+              </a>
+            </div>
+            <a href="/contact" className="btn-ghost w-fit text-white">
+              Book a call
+            </a>
           </div>
         </div>
       </div>
-      <div className="regular-10 flexCenter pt-28 ">
-        © 2024 PT. Dua Zamrud Khatulistiwa All rights reserved.
+      <div className="border-t border-white/10 py-6 text-center text-xs text-white/60">
+        (c) 2026 PT. Dua Zamrud Khatulistiwa. All rights reserved.
       </div>
     </footer>
   );

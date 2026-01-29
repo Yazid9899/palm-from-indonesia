@@ -12,7 +12,7 @@ export const NAV_LINKS = [
       { name: "Indonesian Spices", tag: "spices" },
     ],
   },
-  { href: "/contact", key: "contacts ", label: "Contact Us" },
+  { href: "/contact", key: "contact", label: "Contact Us" },
 ];
 
 export const PRODUCTS_DATA = [
@@ -25,7 +25,7 @@ export const PRODUCTS_DATA = [
     description2:
       "Our offerings include whole vanilla beans, vanilla caviar, and vanilla powder, available in both gourmet and extract grades to suit various culinary and commercial needs.",
    
-      devarative: [
+      derivative: [
       {
         name: "powder",
         imageSrc: "/vanilla-powder.jpg",
@@ -46,22 +46,22 @@ export const PRODUCTS_DATA = [
     type: [
       {
         name: "Planifolia Vanilla",
-        origin: "Sulawesi, Nusa Tenggara, Maluku, Bali.",
+        Origin: "Sulawesi, Nusa Tenggara, Maluku, Bali.",
         imageSrc: "/planifolia-vanilla.jpg",
         profile:
           "Smooth, creamy, and rich flavor profile. Commonly used for baked goods, chocolate, cream dessert, beverages, savory dishes and more.",
       },
       {
         name: "Tahitensis Vanilla",
-        origin: "Papua.",
+        Origin: "Papua.",
         imageSrc: "/tahitensis-vanilla.jpg",
         profile:
           "Cherries, delicate licorice, raisins, red wine, floral, fruity, sweet notes. Based on our customer, they prefer to use with fresh fruit, cream dessert, baked goods, beverages, savory cream sauce and more.",
       },
     ],
-    spesification: [
+    Specifications: [
       {
-        name: "Spesification",
+        name: "Specifications",
         description: [
           "Gourmet Grade (grade A)",
           "Extract Grade (grade B)",
@@ -69,7 +69,7 @@ export const PRODUCTS_DATA = [
         ],
       },
       {
-        name: "Production Capacity",
+        name: "Production capacity",
         description: ["800-1500 Kg/month"],
       },
       {
@@ -85,12 +85,12 @@ export const PRODUCTS_DATA = [
   {
     slug: "coconut",
     name: "COCONUT DERIVATIVE",
-    title: "The Authentic taste from archipelago",
+    title: "The authentic taste from the archipelago",
     description1:
       "The coconut (Cocos nucifera L.) is a tropical plant deeply rooted in Indonesian culture, visible from its widespread presence across the archipelago. Often referred to as ‘the tree of life,’ the coconut plant is prized for its versatility and high economic value.",
     description2:
       "Our coconut-based offerings include Desiccated Coconut and Virgin Coconut Oil, both crafted with a commitment to quality to meet various culinary and commercial needs.",
-    devarative: [
+    derivative: [
       {
         name: "Desiccated Coconut",
         imageSrc: "/card-pict-2.jpg",
@@ -101,24 +101,24 @@ export const PRODUCTS_DATA = [
       },
     ],
     type: [],
-    spesification: [
+    Specifications: [
       {
-        name: "spesification",
+        name: "Specifications",
         description: [
           "High Fat DC - fat content 63-67%",
           "Low Fat DC - fat content 42-45%",
         ],
       },
       {
-        name: "production Capacity",
+        name: "Production capacity",
         description: ["100-150 MT/month (DC)", "20 kl/month (VCO)"],
       },
       {
-        name: "certification",
+        name: "Certification",
         description: ["Phytosanitary", "CoA", "MSDS"],
       },
       {
-        name: "origin",
+        name: "Origin",
         description: ["South Sumatra", "Banten"],
       },
     ],
@@ -131,7 +131,7 @@ export const PRODUCTS_DATA = [
       "Palm sugar is a natural product derived from the sugar palm plant, made from the sap tapped from the flower stalks of Arenga pinnata or Cocos nucifera. The sap is heated to evaporate water, transforming into a thick liquid that can either be molded into solid shapes or cooled and stirred to create fine crystal palm sugar.",
     description2:
       "We offer a variety of palm sugar forms to suit different needs: Granulated Palm Sugar, Block Palm Sugar, and Liquid Palm Sugar.",
-   devarative: [
+   derivative: [
       {
         name: "Granulated",
         imageSrc: "/vanilla-powder.jpg",
@@ -147,28 +147,28 @@ export const PRODUCTS_DATA = [
     ],
     type: [
       {
-        name: "Diabetic friendly",
-        origin: "",
+        name: "Diabetic-friendly",
+        Origin: "",
         imageSrc: "/palm-type1.png",
         profile: "Glycemic Index 35",
       },
       {
         name: "Distinctive sweetness",
-        origin: "",
+        Origin: "",
         imageSrc: "/palm-type2.png",
         profile: "Suitable for any food and drinks",
       },
     ],
-    spesification: [
+    Specifications: [
       {
-        name: "Spesification",
+        name: "Specifications",
         description: [
           "Granulated: Mesh size 12-18, water content <2%, color golden brown",
           "Block: Coin or cube shape, water content 9%, color red brown",
         ],
       },
       {
-        name: "Production Capacity",
+        name: "Production capacity",
         description: ["50-150 MT/month"],
       },
       {
@@ -189,12 +189,12 @@ export const PRODUCTS_DATA = [
   {
     slug: "spices",
     name: "Indonesian Spices",
-    title: "Spice Up The Culinary",
+    title: "Spice up the culinary experience",
     description1:
-      "Spices are one of the wealth of the nation. Indonesia plays an important role in the life of the nation. In Historically, spices have even played a role important in the global economy.",
+      "Spices are one of the wealth of the nation. Indonesia plays an important role in the life of the nation. Historically, spices have even played a role important in the global economy.",
     description2:
-      "Soil and climate are key aspects of plant growth, including spices and herbs. The land is fertile with the weather stability throughout the year, which means that various types of spices and herbs can grow abundantly in Indonesia.",
-   devarative: [
+      "Soil and climate are key aspects of plant growth, including spices and herbs. The land is fertile with the stable weather throughout the year, which means that various types of spices and herbs can grow abundantly in Indonesia.",
+   derivative: [
       {
         name: "Ginger",
         imageSrc: "/ginger-spices.jpg",
@@ -206,9 +206,9 @@ export const PRODUCTS_DATA = [
     ],
     type: [
     ],
-    spesification: [
+    Specifications: [
       {
-        name: "Spesification",
+        name: "Specifications",
         description: [
           "Elephant Ginger - 100g up & 150g up",
           "Paris Ginger - 100g",
@@ -216,7 +216,7 @@ export const PRODUCTS_DATA = [
         ],
       },
       {
-        name: "Production Capacity",
+        name: "Production capacity",
         description: ["20-45 ton/month"],
       },
       {
@@ -279,18 +279,21 @@ export const VALUES = [
 export const PRODUCT_LINEUP = [
   {
     id: 1,
+    slug: "vanilla",
     name: "Vanilla",
     derivative: "whole . powder . caviar . extract",
     iconSrc: "/vanilla-icon.png",
   },
   {
     id: 2,
+    slug: "coconut",
     name: "Coconut",
-    derivative: "V C O . Desicated Coco",
+    derivative: "V C O . Desiccated Coco",
     iconSrc: "/coconut-icon.png",
   },
   {
     id: 3,
+    slug: "palm",
     name: "palm sugar",
     derivative: "granulated . liquid . block",
     iconSrc: "/palm-sugar-icon.png",
@@ -322,3 +325,5 @@ export const SOCIALS = [
     link: "https://wa.me/6281281748771",
   },
 ];
+
+

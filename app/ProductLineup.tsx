@@ -1,76 +1,78 @@
 import Image from "next/image";
 import Link from "next/link";
+import { PRODUCT_LINEUP } from "@/constants/data";
 
-type ProductsProps = {
-  id: number;
-  label: string;
-  name: string;
-  derivative: string;
-  iconSrc: string;
-};
-const ProductsLineUp: ProductsProps[] = [
-  {
-    id: 1,
-    label: "vanilla",
-    name: "Vanilla",
-    derivative: "whole . powder . caviar . extract",
-    iconSrc: "/vanilla-icon.png",
-  },
-  {
-    id: 2,
-    label: "coconut",
-    name: "Coconut",
-    derivative: "V C O . Desicated Coco",
-    iconSrc: "/coconut-icon.png",
-  },
-  {
-    id: 3,
-    label: "palm",
-    name: "palm sugar",
-    derivative: "granulated . liquid . block",
-    iconSrc: "/palm-sugar-icon.png",
-  },
-];
-export default function roductLineup() {
+export default function ProductLineup() {
   return (
-    <section className="flexCenter md:p-20 py-20">
-      <div className="h-full w-[75rem] flexCenter flex-col z-10">
-        <div className="products-title flexCenter flex-col lineUp-bg w-3/4">
-          <p className="regular-b-48">Only Organic Product</p>
-          <h1 className="bold-48">OUR PRODUCTS</h1>
+    <section className="section-pad">
+      <div className="container-main">
+        <div className="flex flex-col gap-4 text-center">
+          <p className="eyebrow">Our products</p>
+          <h2 className="display-2">Organic ingredients from trusted origins</h2>
+          <p className="lead max-w-2xl mx-auto">
+            Curated staples for culinary and commercial needs, sourced
+            responsibly and prepared for export-ready consistency.
+          </p>
         </div>
-        <div className="border-b-2 w-full border-black my-5"></div>
-        <div className="flexCenter flex-wrap md:gap-20 product-cards-container">
-          {ProductsLineUp.map((product) => (
-            <div key={product.id} className="flexCenter flex-col">
-              <Link href={`/products/${product.label}`}>
-                <Image
-                  src={`/card-pict-${product.id}.jpg`}
-                  alt={product.name}
-                  height={300}
-                  width={300}
-                  className="hover:animate-pulse hover:cursor-pointer"
-                />
-              </Link>
-              <div className=" relative bottom-6 w-[280px] bg-white p-4  rounded-lg drop-shadow-lg">
-                <div className="w-0 h-0 relative bottom-10">
-                  <div className="flexCenter bg-slate-600 w-14 h-14 p-[0.1rem] drop-shadow-lg rounded-md">
-                    <Image
-                      src={product.iconSrc}
-                      alt={product.iconSrc}
-                      height={50}
-                      width={50}
-                      className="drop-shadow-lg"
-                    />
+
+        <div className="mt-12 grid gap-8 md:grid-cols-3">
+          {PRODUCT_LINEUP.map((product) => (
+            <article
+              key={product.id}
+              className="soft-panel overflow-hidden group"
+            >
+              <Link href={`/products/${product.slug}`} className="block">
+                <div className="relative h-56">
+                  <Image
+                    src={`/card-pict-${product.id}.jpg`}
+                    alt={product.name}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-sm">
+                      <Image
+                        src={product.iconSrc}
+                        alt=""
+                        width={32}
+                        height={32}
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-[#2b3328]">
+                        {product.name}
+                      </h3>
+                      <p className="text-xs uppercase tracking-[0.2em] text-[#8a7d6d]">
+                        {product.slug}
+                      </p>
+                    </div>
                   </div>
+                  <p className="mt-4 text-sm text-[#3d352d]">
+                    {product.derivative}
+                  </p>
+                  <span className="mt-6 inline-flex items-center text-sm font-semibold text-[#1f3a2a]">
+                    View details
+                    <svg
+                      className="ml-2 h-4 w-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5 12H19M19 12L13 6M19 12L13 18"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </span>
                 </div>
-                <div className="flexCenter flex-col gap-1">
-                  <h5 className="regular-20">{product.name}</h5>
-                  <div className="border-b-[1px] w-full border-black"></div>
-                  <p className="regular-16">{product.derivative}</p>
-                </div>
-              </div>
-            </div>
+              </Link>
+            </article>
           ))}
         </div>
       </div>

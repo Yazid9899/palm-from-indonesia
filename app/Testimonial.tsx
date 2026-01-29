@@ -1,26 +1,27 @@
 import Image from "next/image";
+
 const testimonials = [
   {
-    body: "Very high vanillin content! It is proof that your product is absolutely high quality.",
-    product: "Tahitensis Vanilla Gourmet grade 16-17 cm",
+    body: "Vanillin content is impressive and the beans are consistent in aroma and moisture.",
+    product: "Tahitensis Vanilla Gourmet Grade 16-17 cm",
     customer: {
-      name: "Satisfied Customer, Japan",
+      name: "Buyer, Japan",
       imageUrl: "/japan-flag.png",
     },
   },
   {
-    body: "Very high vanillin content! It is proof that your product is absolutely high quality.",
-    product: "Tahitensis Vanilla Gourmet grade 16-17 cm",
+    body: "Reliable packing, clear documentation, and steady quality across shipments.",
+    product: "Tahitensis Vanilla Gourmet Grade 16-17 cm",
     customer: {
-      name: "Satisfied Customer, Canada",
+      name: "Buyer, Canada",
       imageUrl: "/canada-flag.png",
     },
   },
   {
-    body: "We got maximum yield from the extraction process and for the sensory taste lab, lab scale is good.",
-    product: "Planifolia Vanilla Extract grade 13-15 cm",
+    body: "Extraction yield and sensory profile were strong for our lab-scale trials.",
+    product: "Planifolia Vanilla Extract Grade 13-15 cm",
     customer: {
-      name: "Satisfied Customer, Malaysia",
+      name: "Buyer, Malaysia",
       imageUrl: "/malaysia-flag.png",
     },
   },
@@ -28,46 +29,41 @@ const testimonials = [
 
 export default function Testimonial() {
   return (
-    <div className="bg-white py-24 sm:py-32">
-      <div className="mx-auto px-6 ">
-        <div className="mx-auto max-w-xl text-center">
-          <h2 className="text-lg font-semibold leading-8 tracking-tight text-green-2">
-            Testimonials
-          </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            What did our customers say about us?
+    <section className="section-pad">
+      <div className="container-main">
+        <div className="text-center">
+          <p className="eyebrow">Testimonials</p>
+          <h2 className="display-2 mt-3">What our customers say</h2>
+          <p className="lead mt-4 mx-auto max-w-2xl">
+            Feedback from global buyers across food, beverage, and ingredient
+            manufacturing.
           </p>
         </div>
-        <div className=" mt-16 flow-root sm:mt-20 w-full">
-          <div className="flex flex-wrap">
-            {testimonials.map((testimonial, n) => (
-              <div key={n} className="pt-8 md:w-96 lg:w-1/3 sm:px-4">
-                <figure className="rounded-2xl bg-gray-50 p-5 text-sm leading-6">
-                  <blockquote className="text-gray-900">
-                    <p>{`“${testimonial.body}”`}</p>
-                    <p className="mt-2">product: </p>
-                    <p className="italic-12">
-                      Tahitensis Vanilla Gourmet grade 16-17 cm
-                    </p>
-                  </blockquote>
-                  <figcaption className="mt-6 flex items-center gap-x-4">
-                    <Image
-                      className="h-7 w-10 bg-gray-50"
-                      width={111}
-                      height={75}
-                      src={testimonial.customer.imageUrl}
-                      alt=""
-                    />
-                    <div className="font-semibold text-gray-900">
-                      {testimonial.customer.name}
-                    </div>
-                  </figcaption>
-                </figure>
-              </div>
-            ))}
-          </div>
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {testimonials.map((testimonial) => (
+            <figure key={testimonial.customer.name} className="soft-panel p-6">
+              <blockquote className="text-sm text-[#3d352d]">
+                "{testimonial.body}"
+              </blockquote>
+              <p className="mt-4 text-xs uppercase tracking-[0.2em] text-[#8a7d6d]">
+                {testimonial.product}
+              </p>
+              <figcaption className="mt-6 flex items-center gap-3">
+                <Image
+                  className="h-8 w-12 rounded-sm object-cover"
+                  width={64}
+                  height={40}
+                  src={testimonial.customer.imageUrl}
+                  alt={testimonial.customer.name}
+                />
+                <p className="text-sm font-semibold text-[#1f3a2a]">
+                  {testimonial.customer.name}
+                </p>
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -20,7 +20,7 @@ export interface ProductType {
   title: string;
   description1: string;
   description2: string;
-  devarative: ProductDerivative[];
+  derivative: ProductDerivative[];
   type: { name: string; origin: string; imageSrc: string; profile: string }[];
   spesification: { name: string; description: string[] }[];
 }
@@ -46,6 +46,7 @@ export interface Value {
 
 export interface ProductLineup {
   id: number;
+  slug: string;
   name: string;
   derivative: string;
   iconSrc: string;
