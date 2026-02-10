@@ -12,7 +12,6 @@ export const NAV_LINKS = [
       { name: "Indonesian Spices", tag: "spices" },
     ],
   },
-  { href: "/contact", key: "contact", label: "Contact Us" },
 ];
 
 export const PRODUCTS_DATA = [
@@ -24,6 +23,8 @@ export const PRODUCTS_DATA = [
       "We proudly source our premium vanilla beans from diverse regions across Indonesia, including Sulawesi, Nusa Tenggara, Maluku, Bali, and Papua. Our vanilla is cured using traditional methods, with the beans naturally sun-dried to ensure optimal flavor and aroma. We take meticulous care in packing and storage to maintain the highest quality standards.",
     description2:
       "Our offerings include whole vanilla beans, vanilla caviar, and vanilla powder, available in both gourmet and extract grades to suit various culinary and commercial needs.",
+    greenBoxDesc:
+      "Sourced from multiple regions across Indonesia and traditionally sun-cured, our vanilla beans are selected for aroma, moisture, and visual consistency. Explore the specifications below for packaging options, production capacity, certifications, and origin to support reliable culinary and commercial use.",
    
       derivative: [
       {
@@ -59,7 +60,7 @@ export const PRODUCTS_DATA = [
           "Cherries, delicate licorice, raisins, red wine, floral, fruity, sweet notes. Based on our customer, they prefer to use with fresh fruit, cream dessert, baked goods, beverages, savory cream sauce and more.",
       },
     ],
-    Specifications: [
+    spesification: [
       {
         name: "Specifications",
         description: [
@@ -90,6 +91,8 @@ export const PRODUCTS_DATA = [
       "The coconut (Cocos nucifera L.) is a tropical plant deeply rooted in Indonesian culture, visible from its widespread presence across the archipelago. Often referred to as ‘the tree of life,’ the coconut plant is prized for its versatility and high economic value.",
     description2:
       "Our coconut-based offerings include Desiccated Coconut and Virgin Coconut Oil, both crafted with a commitment to quality to meet various culinary and commercial needs.",
+    greenBoxDesc:
+      "Derived from Indonesia's abundant coconut resources, our coconut products are processed with care to preserve quality and versatility. Review the specifications below for detailed information on packaging, capacity, certifications, and sourcing.",
     derivative: [
       {
         name: "Desiccated Coconut",
@@ -101,7 +104,7 @@ export const PRODUCTS_DATA = [
       },
     ],
     type: [],
-    Specifications: [
+    spesification: [
       {
         name: "Specifications",
         description: [
@@ -131,6 +134,8 @@ export const PRODUCTS_DATA = [
       "Palm sugar is a natural product derived from the sugar palm plant, made from the sap tapped from the flower stalks of Arenga pinnata or Cocos nucifera. The sap is heated to evaporate water, transforming into a thick liquid that can either be molded into solid shapes or cooled and stirred to create fine crystal palm sugar.",
     description2:
       "We offer a variety of palm sugar forms to suit different needs: Granulated Palm Sugar, Block Palm Sugar, and Liquid Palm Sugar.",
+    greenBoxDesc:
+      "Naturally produced from palm sap and traditionally processed to retain its rich character, our palm sugar is available in multiple forms. Explore the specifications below for packaging types, capacity, certifications, and sourcing information.",
    derivative: [
       {
         name: "Granulated",
@@ -159,7 +164,7 @@ export const PRODUCTS_DATA = [
         profile: "Suitable for any food and drinks",
       },
     ],
-    Specifications: [
+    spesification: [
       {
         name: "Specifications",
         description: [
@@ -194,6 +199,8 @@ export const PRODUCTS_DATA = [
       "Spices are one of the wealth of the nation. Indonesia plays an important role in the life of the nation. Historically, spices have even played a role important in the global economy.",
     description2:
       "Soil and climate are key aspects of plant growth, including spices and herbs. The land is fertile with the stable weather throughout the year, which means that various types of spices and herbs can grow abundantly in Indonesia.",
+    greenBoxDesc:
+      "Grown in fertile soil and stable tropical conditions, our Indonesian spices reflect the country's long-standing agricultural heritage. Review the sections below for specifications covering packaging, production capacity, certifications, and origin.",
    derivative: [
       {
         name: "Ginger",
@@ -206,7 +213,7 @@ export const PRODUCTS_DATA = [
     ],
     type: [
     ],
-    Specifications: [
+    spesification: [
       {
         name: "Specifications",
         description: [
@@ -325,5 +332,6 @@ export const SOCIALS = [
     link: "https://wa.me/6281281748771",
   },
 ];
+
 
 

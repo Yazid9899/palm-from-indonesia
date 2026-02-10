@@ -33,7 +33,7 @@ export default function ProductLineup() {
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-3">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-sm">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#1f3a2a] shadow-sm ring-1 ring-[#1f3a2a]/10">
                       <Image
                         src={product.iconSrc}
                         alt=""

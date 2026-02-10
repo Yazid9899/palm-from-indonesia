@@ -20,6 +20,7 @@ export interface ProductType {
   title: string;
   description1: string;
   description2: string;
+  greenBoxDesc: string;
   derivative: ProductDerivative[];
   type: { name: string; origin: string; imageSrc: string; profile: string }[];
   spesification: { name: string; description: string[] }[];

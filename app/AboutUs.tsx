@@ -112,13 +112,15 @@ export default function AboutUs() {
               <div className="mt-4 grid gap-3">
                 {VALUES.map((value) => (
                   <div key={value.id} className="flex items-start gap-3">
-                    <Image
-                      src={value.svgSrc}
-                      alt={value.title}
-                      width={36}
-                      height={36}
-                      className="h-9 w-9"
-                    />
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#1f3a2a] ring-1 ring-[#1f3a2a]/10">
+                      <Image
+                        src={value.svgSrc}
+                        alt={value.title}
+                        width={36}
+                        height={36}
+                        className="h-7 w-7"
+                      />
+                    </div>
                     <div>
                       <p className="text-sm font-semibold text-[#1f3a2a]">
                         {value.title}

@@ -77,13 +77,15 @@ export default function Page() {
               <p className="text-xs uppercase tracking-[0.3em] text-[#8a7d6d]">
                 Request a sample
               </p>
-              <Image
-                src={`/${product.slug}-sample.png`}
-                alt={`${product.name} sample`}
-                width={220}
-                height={220}
-                className="mt-4 h-44 w-auto"
-              />
+              <div className="mt-4 flex h-52 items-center justify-center overflow-hidden rounded-2xl bg-[#f6f2ea]">
+                <Image
+                  src={`/${product.slug}-sample.png`}
+                  alt={`${product.name} sample`}
+                  width={260}
+                  height={260}
+                  className="h-full w-full object-contain object-center p-2"
+                />
+              </div>
               <button
                 onClick={() => {
                   window.location.href = `/contact?message=Request%20sample%20for%20${product.title}`;
@@ -168,9 +170,7 @@ export default function Page() {
               <p className="text-xs uppercase tracking-[0.3em] text-[#f8d9a6]">
                 Specifications
               </p>
-              <p className="mt-4 text-sm text-white/80">
-                Expand each section for packaging, certifications, and origins.
-              </p>
+              <p className="mt-4 text-sm text-white/80">{product.greenBoxDesc}</p>
             </div>
             <div className="space-y-3">
               {product.spesification.map((spec, index) => (
@@ -201,8 +201,10 @@ export default function Page() {
                     </svg>
                   </button>
                   <div
-                    className={`overflow-hidden px-5 pb-4 text-sm text-[#6f6152] transition-all ${
-                      openIndexes[index] ? "max-h-96" : "max-h-0"
+                    className={`overflow-hidden px-5 text-sm text-[#6f6152] transition-all duration-300 ${
+                      openIndexes[index]
+                        ? "max-h-[420px] pb-4 opacity-100"
+                        : "max-h-0 pb-0 opacity-0"
                     }`}
                   >
                     <div className="space-y-2">
