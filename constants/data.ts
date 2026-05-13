@@ -47,14 +47,14 @@ export const PRODUCTS_DATA = [
     type: [
       {
         name: "Planifolia Vanilla",
-        Origin: "Sulawesi, Nusa Tenggara, Maluku, Bali.",
+        origin: "Sulawesi, Nusa Tenggara, Maluku, Bali.",
         imageSrc: "/planifolia-vanilla.jpg",
         profile:
           "Smooth, creamy, and rich flavor profile. Commonly used for baked goods, chocolate, cream dessert, beverages, savory dishes and more.",
       },
       {
         name: "Tahitensis Vanilla",
-        Origin: "Papua.",
+        origin: "Papua.",
         imageSrc: "/tahitensis-vanilla.jpg",
         profile:
           "Cherries, delicate licorice, raisins, red wine, floral, fruity, sweet notes. Based on our customer, they prefer to use with fresh fruit, cream dessert, baked goods, beverages, savory cream sauce and more.",
@@ -153,13 +153,13 @@ export const PRODUCTS_DATA = [
     type: [
       {
         name: "Diabetic-friendly",
-        Origin: "",
+        origin: "",
         imageSrc: "/palm-type1.png",
         profile: "Glycemic Index 35",
       },
       {
         name: "Distinctive sweetness",
-        Origin: "",
+        origin: "",
         imageSrc: "/palm-type2.png",
         profile: "Suitable for any food and drinks",
       },

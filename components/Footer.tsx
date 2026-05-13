@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { SVGProps } from "react";
+import { ReactElement, SVGProps } from "react";
 
 interface Social {
   label: string;
   link: string;
-  icon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
+  icon: (props: SVGProps<SVGSVGElement>) => ReactElement;
 }
 
 export const SOCIALSS: Social[] = [

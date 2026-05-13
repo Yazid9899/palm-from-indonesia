@@ -4,7 +4,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useState } from "react";
 import Image from "next/image";
-import Form from "next/form";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -146,7 +145,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <Form onSubmit={handleSubmit} className="soft-panel p-6">
+            <form onSubmit={handleSubmit} className="soft-panel p-6">
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                 <div>
                   <label
@@ -270,7 +269,7 @@ export default function Contact() {
                   {isSubmitting ? "Sending..." : "Send message"}
                 </button>
               </div>
-            </Form>
+            </form>
           </div>
         </div>
       </section>
